@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/pegasus/inc/complaint_box/BuildConfig.java
+ com.pegasus.inc.complaint_box.BuildConfig
