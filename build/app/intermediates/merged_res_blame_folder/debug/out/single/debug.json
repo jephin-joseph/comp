@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/home/jephinjoseph/Documents/complaint_box/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/home/jephinjoseph/Documents/complaint_box/android/app/src/main/res/drawable/launch_background.xml"
-    },
-    {
         "merged": "/home/jephinjoseph/Documents/complaint_box/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/home/jephinjoseph/Documents/complaint_box/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },

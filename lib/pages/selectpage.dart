@@ -1,3 +1,4 @@
+import 'package:complaint_box/authenticate/authenticate.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,7 +16,7 @@ class SelectPage extends StatelessWidget {
           body: 
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
 
 
@@ -88,6 +89,10 @@ class SelectPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15)),
                   ),
               ),
+              InkWell(
+                onTap: (){signout();},
+                child: Container(height: 50,width: 100,decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(20),),child: Center(child: Text("Logout")),),
+              )
             ],),
     );
   }

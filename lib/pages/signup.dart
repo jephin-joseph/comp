@@ -33,6 +33,7 @@ class _FormScreenState extends State<FormScreen> {
           .hasMatch(value)){
             return 'no numbers allowed';
           }
+          return null;
         },
         onSaved: (value){
           _name=value!;
@@ -79,6 +80,7 @@ class _FormScreenState extends State<FormScreen> {
           if(value.length<8){
             return 'password must be greater than 8 characters long';
           }
+          return null;
         },
         onSaved: (value){
           _password=value!;
@@ -98,6 +100,7 @@ class _FormScreenState extends State<FormScreen> {
           if(value!.isEmpty){
             return 'Phone number is required';
           }
+          return null;
         },
         onSaved: (value){
           _phoneNumber=value!;
@@ -113,12 +116,15 @@ class _FormScreenState extends State<FormScreen> {
     //DateTime selectedDate = DateTime.now();
 
     return TextFormField(
+      
 
-      decoration: InputDecoration(labelText: 'Date of birth'),
+      decoration: InputDecoration(labelText: 'Date of birth',),
+      
         validator: (value){
           if(value!.isEmpty){
             return 'Date of birth is required';
           }
+          return null;
         },
         onSaved: (value){
           _DOB=value!;
@@ -129,42 +135,44 @@ class _FormScreenState extends State<FormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      
       appBar: AppBar(title: Text('data'),),
       body: Container(
         margin: EdgeInsets.all(24),
       child: Form(
         key: _formkey,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        _buildName(),
-        _buildEmail(),
-        _buildPassword(),
-        _buildPhoneNumber(),
-        _buildDOB(),
-        SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: (){
-            if (!_formkey.currentState!.validate()){
-              return ;
-            }
-            _formkey.currentState!.save();
-            print(_name) ;
-            print(_email) ;
-            print(_password) ;
-            print(_phoneNumber);
-            print(_DOB);
-          }, 
-        child: Text(
-          'submit', 
-          style: TextStyle(
-            color: Colors.brown,
-            fontSize: 16),
-            ),
-            )
-      ],
-      ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+          _buildName(),
+          _buildEmail(),
+          _buildPassword(),
+          _buildPhoneNumber(),
+          _buildDOB(),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: (){
+              if (!_formkey.currentState!.validate()){
+                return ;
+              }
+              _formkey.currentState!.save();
+              print(_name) ;
+              print(_email) ;
+              print(_password) ;
+              print(_phoneNumber);
+              print(_DOB);
+            }, 
+          child: Text(
+            'submit', 
+            style: TextStyle(
+              color: Colors.brown,
+              fontSize: 16),
+              ),
+              )
+              ],
+              ),
+        ),
       ),
       ),
     );

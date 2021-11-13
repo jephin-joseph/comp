@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216415860916",
+    "project_id": "compliantbox-e6108",
+    "storage_bucket": "compliantbox-e6108.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216415860916:android:4db5a48c41f34b601bffe1",
+        "android_client_info": {
+          "package_name": "com.pegasus.inc.complaint_box"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216415860916-mt6u7tdqh0bpah7243qrmkoaodf5gmt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoHH9oAHWfyV6zEcyL6HwH-sv2gWJzn7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216415860916-mt6u7tdqh0bpah7243qrmkoaodf5gmt7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

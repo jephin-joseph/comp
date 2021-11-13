@@ -1,11 +1,13 @@
+import 'package:complaint_box/authenticate/authenticate.dart';
 import 'package:flutter/material.dart';
-import 'forgotpassword.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController controllermail =TextEditingController();
+    TextEditingController controllerpass =TextEditingController();
     return MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -41,9 +43,10 @@ class Login extends StatelessWidget {
           ),
           Container(
             //username field
-            child: const Padding(
+            child: Padding(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
+                controller: controllermail,
                 decoration: InputDecoration(
                   labelText: 'User name',
                   labelStyle: TextStyle(fontWeight: FontWeight.bold),
@@ -54,9 +57,11 @@ class Login extends StatelessWidget {
           ),
           Container(
             //password field
-            child: const Padding(
+            child: Padding(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
+                obscureText: true,
+                controller: controllerpass,
                 decoration: (InputDecoration(
                   labelText: 'Password',
                   labelStyle: TextStyle(fontWeight: FontWeight.bold),
@@ -112,7 +117,7 @@ class Login extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, '/selectpage');
+              signinemail(controllermail.text, controllerpass.text);
             },
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
@@ -134,29 +139,29 @@ class Login extends StatelessWidget {
           ),
 
           //facebook button
-          Container(
-            height: 45,
-            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Colors.blueAccent),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.facebook,
-                  size: 30,
-                ),
-                Center(
-                  child: Text(
-                    'Login with Facebook',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
-                )
-              ],
-            ),
-          ),
+          // Container(
+          //   height: 45,
+          //   margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+          //   decoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(20),
+          //     border: Border.all(color: Colors.blueAccent),
+          //   ),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     children: const [
+          //       Icon(
+          //         Icons.facebook,
+          //         size: 30,
+          //       ),
+          //       Center(
+          //         child: Text(
+          //           'Login with Facebook',
+          //           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          //         ),
+          //       )
+          //     ],
+          //   ),
+          // ),
 
 
 
