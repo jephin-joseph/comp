@@ -1,5 +1,6 @@
 import 'package:complaint_box/pages/forgotpassword.dart';
 import 'package:complaint_box/pages/selectpage.dart';
+import 'package:complaint_box/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'pages/loginpage.dart';
 import 'package:complaint_box/pages/loginpage.dart';
@@ -20,6 +21,7 @@ class StartPage extends StatelessWidget {
         '/' : (context) => const Login(),                       //login page
         '/selectpage':(context) => const SelectPage(),          //select page   
         '/resetpwd':(context) => const resetpwd(),              //password reset page 
+        '/signup':(context)=> const FormScreen()                //signup form page
       },
       );
   }
